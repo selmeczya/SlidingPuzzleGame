@@ -1,0 +1,108 @@
+body {
+  height: 100vh;
+  background-color: #808580;
+}
+
+#root {
+  max-width: 664px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.game-area {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-gap: 10px;
+
+  background-color: #f0f0f0;
+  border: 1px solid #bbb;
+}
+
+.tile-item,
+tile-item-empty {
+  position: relative;
+  width: 200px;
+  height: 200px;
+
+  display: flex;
+  align-items: center;
+  font-size: 6em;
+  justify-content: center;
+  cursor: pointer;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+.tile-item {
+  background-size: auto;
+}
+
+.tile-item-empty {
+  visibility: hidden;
+  background-color: #f0f0f0;
+  background-image: none;
+  border: none;
+}
+
+.button-blue {
+  margin: 15px;
+  font-size: 1.2em;
+  color: white;
+  background-color: #00a0ff;
+  border: 2px solid #0070c0;
+  border-radius: 10px;
+}
+
+.animate-right {
+  animation-name: slide-to-right;
+}
+
+.animate-left {
+  animation-name: slide-to-left;
+}
+
+.animate-down {
+  animation-name: slide-to-down;
+}
+
+.animate-up {
+  animation-name: slide-to-up;
+}
+
+@keyframes slide-to-right {
+  from {
+    left: 0px;
+  }
+  100% {
+    left: 210px;
+  }
+}
+
+@keyframes slide-to-left {
+  from {
+    left: 0px;
+  }
+  100% {
+    left: -210px;
+  }
+}
+
+@keyframes slide-to-down {
+  from {
+    top: 0px;
+  }
+  100% {
+    top: 210px;
+  }
+}
+
+@keyframes slide-to-up {
+  from {
+    top: 0px;
+  }
+  100% {
+    top: -210px;
+  }
+}
